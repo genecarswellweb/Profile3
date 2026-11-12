@@ -1,0 +1,289 @@
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --navy:#021427;
+    --navy-light:#041528;
+    --gold:#d4af5c;
+    --white:#ffffff;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--navy);
+    color:var(--white);
+    font-family:'Montserrat',sans-serif;
+    overflow-x:hidden;
+}
+
+/* HERO */
+
+.hero{
+    position:relative;
+    min-height:100vh;
+    overflow:hidden;
+}
+
+.hero-image{
+    width:100%;
+    display:block;
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    height:180px;
+    background:linear-gradient(
+        transparent,
+        var(--navy)
+    );
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(
+        rgba(2,20,39,.05),
+        rgba(2,20,39,.45)
+    );
+
+    pointer-events:none;
+}
+
+/* CONTACT OVERLAY */
+
+.contact-panel{
+    position:absolute;
+    bottom:70px;
+    left:50%;
+    transform:translateX(-50%);
+    z-index:20;
+
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.contact-btn{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:18px 34px;
+
+    text-decoration:none;
+
+    color:white;
+
+    background:
+        rgba(255,255,255,.08);
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid
+        rgba(255,255,255,.20);
+
+    border-radius:8px;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    font-size:.85rem;
+
+    transition:.3s ease;
+}
+
+.contact-btn:hover{
+
+    background:var(--gold);
+
+    color:var(--navy);
+
+    border-color:var(--gold);
+
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 12px 30px
+        rgba(212,175,92,.30);
+}
+
+.icon{
+
+    width:32px;
+    height:32px;
+
+    border-radius:50%;
+
+    background:
+        rgba(255,255,255,.12);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-weight:600;
+}
+
+/* EXECUTIVE STATEMENT */
+
+.executive-statement{
+
+    background:var(--navy-light);
+
+    padding:120px 10%;
+
+    text-align:center;
+}
+
+.executive-statement p{
+
+    max-width:950px;
+
+    margin:auto;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:2.5rem;
+
+    line-height:1.5;
+}
+
+/* FOOTER */
+
+footer{
+
+    text-align:center;
+
+    background:#010d19;
+
+    color:var(--gold);
+
+    padding:35px;
+
+    letter-spacing:3px;
+
+    font-size:.8rem;
+
+    text-transform:uppercase;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .contact-panel{
+
+        width:90%;
+
+        justify-content:center;
+
+        bottom:30px;
+    }
+
+    .contact-btn{
+
+        width:100%;
+
+        justify-content:center;
+    }
+
+    .executive-statement{
+
+        padding:80px 8%;
+    }
+
+    .executive-statement p{
+
+        font-size:1.6rem;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<section class="hero">
+
+    <img
+        src="images/gene-carswell-hero.jpg"
+        alt="Gene Carswell Executive Profile"
+        class="hero-image">
+
+    <div class="overlay"></div>
+
+    <div class="contact-panel">
+
+        <a
+            href="mailto:bgcarswell@comcast.net"
+            class="contact-btn">
+
+            <span class="icon">✉</span>
+
+            Contact Gene Carswell
+
+        </a>
+
+        <a
+            href="https://www.linkedin.com/in/genecarswell"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-btn">
+
+            <span class="icon">in</span>
+
+            View LinkedIn Profile
+
+        </a>
+
+    </div>
+
+</section>
+
+<section class="executive-statement">
+
+    <p>
+
+        Creating sustainable enterprise value through
+        operational excellence, leadership development,
+        and disciplined execution.
+
+    </p>
+
+</section>
+
+<footer>
+
+    Executive Leadership • Operational Excellence • Strategic Growth
+
+</footer>
+
+</body>
+</html>
